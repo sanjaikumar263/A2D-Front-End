@@ -1,0 +1,57 @@
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Set height as needed, like full viewport height */
+    overflow: hidden;
+  }
+  
+  .bg_video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  .video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+.black{
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.749);
+}
+.spacial{
+    color: #E4A025;
+    font-family: Pacifico;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.spacial1{
+    color: #E4A025;
+    font-family: Pacifico;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.title{
+    background: rgba(255, 255, 255, 0.389) ;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+}

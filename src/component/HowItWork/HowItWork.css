@@ -1,0 +1,71 @@
+.deil_card {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    cursor: pointer;
+  }
+  
+  .hover_cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    background-color: #f4f4f4;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    position: relative; 
+    overflow: hidden; 
+  }
+  
+  .icons {
+    width: 30px;
+    transition: all 0.3s ease;
+  }
+  
+  .hover_cart img,
+  .hover_cart p:first-of-type {
+    transition: all 0.3s ease;
+  }
+  
+  .hover_cart:hover img,
+  .hover_cart:hover p:first-of-type {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .hover_cart .pre {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgb(228, 160, 37);
+    font-size: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .hover_cart:hover .pre {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+.main{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}

@@ -1,0 +1,91 @@
+.main_card {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .cards {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+    gap: 20px; /* Add spacing between cards */
+    cursor: default;
+  }
+  
+  .cart_Item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #E4A025;
+    border-radius: 10px;
+    font-size: 16px;
+    width: 100%; /* Full width on small screens */
+    max-width: 310px; /* Max width for larger screens */
+    height: 190px;
+    transition: transform 120ms ease-in-out;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    padding: 20px;
+  }
+  
+  .cart_Item:hover {
+    transform: scale(1.05); /* Scale entire card on hover */
+  }
+  
+  .cart_Item h2 {
+    margin: 10px 0;
+    font-size: 1.8rem;
+    transition: transform 120ms ease-in-out;
+  }
+  
+  .cart_Item p {
+    margin: 5px 0;
+    font-size: 1rem;
+    transition: transform 120ms ease-in-out;
+  }
+  
+  .cart_Item:hover h2,
+  .cart_Item:hover p {
+    transform: scale(1.1);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .cart_Item {
+      max-width: 45%; /* Two cards per row on tablets */
+      height: 160px; /* Slightly smaller height */
+      font-size: 14px;
+    }
+  
+    .cart_Item h2 {
+      font-size: 1.5rem;
+    }
+  
+    .cart_Item p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cart_Item {
+      max-width: 100%; /* One card per row on mobile */
+      height: 140px; /* Smaller height for mobile */
+      font-size: 12px;
+    }
+  
+    .cart_Item h2 {
+      font-size: 1.3rem;
+    }
+  
+    .cart_Item p {
+      font-size: 0.8rem;
+    }
+  
+    .cards {
+      margin-top: 20px;
+      gap: 15px;
+    }
+  }
