@@ -45,7 +45,7 @@ const Form = () => {
     if (validateForm()) {
       console.log("Form submitted successfully", formData);
       axios
-        .post("http://localhost:4000/post", formData)
+        .post("https://a2d-backend.onrender.com/post", formData)
         .then((res) => console.log(res.data))
         .catch((err) => alert('Error Mail'));
       setFormData(defaultValue);

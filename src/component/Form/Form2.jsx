@@ -47,7 +47,7 @@ const Form2 = () => {
     if (validateForm()) {
       console.log("Form2 submitted successfully", formData);
       axios
-        .post("http://localhost:3000/experbuilt", formData)
+        .post("https://a2d-backend.onrender.com/experbuilt", formData)
         .then((res) => console.log(res.data))
         .catch((err) => console.error(err));
       setFormData({
