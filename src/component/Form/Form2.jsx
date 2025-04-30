@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Form.css";
 import axios from "axios";
+import {toast} from 'react-toastify'
 
 const Form2 = () => {
   const [formData, setFormData] = useState({
@@ -48,8 +49,8 @@ const Form2 = () => {
       console.log("Form2 submitted successfully", formData);
       axios
         .post("https://a2d-backend.onrender.com/experbuilt", formData)
-        .then((res) => console.log(res.data))
-        .catch((err) => console.error(err));
+        .then((res) => toast.success('Form Submit Successfly') )
+        .catch((err) => toast.error('Form Not Submit Please Contact Support') );
       setFormData({
         categories: "Expert Built",
         name: "",

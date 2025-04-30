@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Form.css";
 import Form2 from "./Form2";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 const Form = () => {
   const defaultValue = {
@@ -43,13 +44,16 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      console.log("Form submitted successfully", formData);
       axios
         .post("https://a2d-backend.onrender.com/post", formData)
-        .then((res) => console.log(res.data))
-        .catch((err) => alert('Error Mail'));
-      setFormData(defaultValue);
-      setErrors({});
+        .then((res) =>{
+          toast.success('Form Submit Successfuly')
+          setFormData(defaultValue);
+        })
+        .catch((err) => {
+          toast.error('Form Not Submit Successfuly')
+          setErrors({});
+        });
     }
   };
 

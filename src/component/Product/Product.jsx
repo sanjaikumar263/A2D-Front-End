@@ -38,7 +38,7 @@ const Product = () => {
           </ul>
         </div>
         <div>
-          <img src={asssts.pc2} alt="" className='temp '/>
+          <img src={asssts.pc2} alt="" className='temp1'/>
         </div>
       </div>
     

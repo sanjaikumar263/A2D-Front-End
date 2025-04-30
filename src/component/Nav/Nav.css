@@ -3,6 +3,7 @@
   position: fixed;
   top: 0;
   z-index: 1000;
+  background: black;
 }
 
 .container {
@@ -12,7 +13,7 @@
 }
 
 .logo img {
-  height: 40px; /* Adjust based on your logo size */
+  height: 40px; /* Base logo size */
 }
 
 .nav-links {
@@ -24,17 +25,40 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 20px; /* Space between nav items */
+  display: flex;
+  gap: 20px;
 }
 
 .nav-item {
   cursor: pointer;
   transition: color 0.3s;
+  font-size: 16px;
 }
 
 .nav-item a {
   text-decoration: none;
-  color: inherit;
+  color: white;
+}
+
+.nav-item.active a {
+  color: orange;
+  font-weight: 600;
+}
+
+.nav-item a:hover {
+  color: #ddd;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  border-color: #ffc107;
+  color: #212529;
+  font-weight: 500;
+}
+
+.btn-warning:hover {
+  background-color: #e0a800;
+  border-color: #d39e00;
 }
 
 .menu {
@@ -46,8 +70,68 @@
   cursor: pointer;
 }
 
-/* Mobile View */
-@media (max-width: 991px) {
+/* Extra Small Screens (Mobile, max-width: 576px) */
+@media (max-width: 576px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .logo img {
+    height: 32px;
+  }
+  .nav-bar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background: black;
+}
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: black;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .nav-links.open {
+    display: block;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nav-item {
+    font-size: 14px;
+  }
+
+  .menu {
+    display: block;
+    font-size: 20px;
+  }
+
+  .btn-warning {
+    width: 100%;
+    padding: 8px;
+  }
+}
+
+/* Small to Medium Screens (Tablet, 577px to 991px) */
+@media (min-width: 577px) and (max-width: 991px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .logo img {
+    height: 36px;
+  }
+
   .nav-links {
     display: none;
     position: absolute;
@@ -68,18 +152,51 @@
     gap: 15px;
   }
 
+  .nav-item {
+    font-size: 15px;
+  }
+
   .menu {
     display: block;
+    font-size: 22px;
   }
 }
 
-/* Desktop View */
+/* Large Screens (Desktop, min-width: 992px) */
 @media (min-width: 992px) {
   .nav-links {
     display: flex !important;
   }
 
+  .nav-list {
+    flex-direction: row;
+    gap: 25px;
+  }
+
+  .nav-item {
+    font-size: 16px;
+  }
+
   .menu {
     display: none;
+  }
+}
+
+/* Extra Large Screens (min-width: 1200px) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1400px;
+  }
+
+  .logo img {
+    height: 48px;
+  }
+
+  .nav-list {
+    gap: 30px;
+  }
+
+  .nav-item {
+    font-size: 18px;
   }
 }
