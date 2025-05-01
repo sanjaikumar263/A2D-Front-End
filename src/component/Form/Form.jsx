@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Form.css";
 import Form2 from "./Form2";
 import axios from "axios";
@@ -56,7 +56,6 @@ const Form = () => {
         });
     }
   };
-
   return (
     <div id="contact" className="form-container">
       <div className="toggle-buttons d-flex justify-content-center gap-4 mb-4">

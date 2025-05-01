@@ -5,6 +5,7 @@ import KeyPointes from './component/KeyPointes/KeyPointes'
 import HowItWork from './component/HowItWork/HowItWork'
 import Product from './component/Product/Product'
 import Form from './component/Form/Form'
+import { ToastContainer } from 'react-toastify'
 
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
       <HowItWork/>
       <Product/>
       <Form/>
+      <ToastContainer/>
     </div>
   )
 }
