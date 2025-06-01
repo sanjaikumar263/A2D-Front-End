@@ -29,7 +29,7 @@ const Nav = () => {
                 fontWeight: menu === "Home" ? 600 : 200,
               }}
             >
-              <a href="home">
+              <a href="#home">
               {menu === "Home" ? "🪖 Home" : "Home"}
               </a>
             </li>
